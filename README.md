@@ -1,0 +1,2 @@
+# selvigsm
+SELVİ GSM SİTE DOSYALARI
