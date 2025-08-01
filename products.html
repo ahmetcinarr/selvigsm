@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MobileHub</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-mobile-alt me-2"></i>MobileHub
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sim-activation.html">SIM Activation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-link p-2 me-2" id="themeToggle">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <button class="btn btn-outline-primary me-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h1 class="display-4 fw-bold mb-3">Our Products</h1>
+                    <p class="lead text-muted">
+                        Discover our extensive collection of premium smartphones and accessories
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="products-section py-5">
+        <div class="container">
+            <!-- Tab Navigation -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <ul class="nav nav-pills nav-fill glass-tabs" id="productTabs" role="tablist" data-aos="fade-up">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="phones-tab" data-bs-toggle="pill" data-bs-target="#phones" type="button" role="tab">
+                                <i class="fas fa-mobile-alt me-2"></i>Smartphones
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="accessories-tab" data-bs-toggle="pill" data-bs-target="#accessories" type="button" role="tab">
+                                <i class="fas fa-headphones me-2"></i>Accessories
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="productTabsContent">
+                <!-- Smartphones Tab -->
+                <div class="tab-pane fade show active" id="phones" role="tabpanel">
+                    <div class="row g-4">
+                        <!-- Phone 1 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/667eea/ffffff?text=iPhone+15+Pro" alt="iPhone 15 Pro" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-primary-subtle text-primary">Apple</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">iPhone 15 Pro</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Latest flagship with A17 Pro chip, titanium design, and advanced camera system.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.9)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$999</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone 2 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/764ba2/ffffff?text=Samsung+S24" alt="Samsung Galaxy S24" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-secondary-subtle text-secondary">Samsung</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Galaxy S24 Ultra</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Premium Android flagship with S Pen, 200MP camera, and AI features.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.8)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$1,199</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone 3 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/f093fb/ffffff?text=Google+Pixel+8" alt="Google Pixel 8" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-success-subtle text-success">Google</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Pixel 8 Pro</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Pure Android experience with advanced AI photography and Tensor G3 chip.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.6)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$899</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone 4 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/4facfe/ffffff?text=OnePlus+12" alt="OnePlus 12" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-danger-subtle text-danger">OnePlus</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">OnePlus 12</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Flagship killer with Snapdragon 8 Gen 3, fast charging, and premium design.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.7)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$799</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone 5 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/43e97b/ffffff?text=Xiaomi+14" alt="Xiaomi 14" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-warning-subtle text-warning">Xiaomi</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Xiaomi 14 Ultra</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Photography powerhouse with Leica cameras and flagship performance.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.5)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$699</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone 6 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/38f9d7/ffffff?text=Nothing+Phone+2" alt="Nothing Phone 2" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-info-subtle text-info">Nothing</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Nothing Phone (2)</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Unique transparent design with Glyph Interface and premium build quality.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.4)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$599</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessories Tab -->
+                <div class="tab-pane fade" id="accessories" role="tabpanel">
+                    <div class="row g-4">
+                        <!-- Accessory 1 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/667eea/ffffff?text=AirPods+Pro" alt="AirPods Pro" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-primary-subtle text-primary">Audio</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">AirPods Pro (2nd Gen)</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Premium wireless earbuds with active noise cancellation and spatial audio.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.8)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$249</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accessory 2 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/764ba2/ffffff?text=Wireless+Charger" alt="Wireless Charger" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-success-subtle text-success">Charging</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">15W Wireless Charger</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Fast wireless charging pad with LED indicator and premium design.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.5)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$39</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accessory 3 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/f093fb/ffffff?text=Phone+Case" alt="Phone Case" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-warning-subtle text-warning">Protection</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Premium Phone Case</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Military-grade protection with transparent design and wireless charging support.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.9)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$29</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accessory 4 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/4facfe/ffffff?text=Power+Bank" alt="Power Bank" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-info-subtle text-info">Power</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">20,000mAh Power Bank</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        High-capacity portable charger with fast charging and multiple ports.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.6)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$49</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accessory 5 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/43e97b/ffffff?text=Car+Mount" alt="Car Mount" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-secondary-subtle text-secondary">Mount</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Magnetic Car Mount</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        Strong magnetic phone holder for car dashboard with 360° rotation.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.3)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$19</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accessory 6 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                            <div class="product-card glass-card h-100">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/300x300/38f9d7/ffffff?text=Screen+Protector" alt="Screen Protector" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-primary btn-sm rounded-pill">
+                                            <i class="fas fa-eye me-2"></i>Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-4">
+                                    <div class="product-category mb-2">
+                                        <span class="badge bg-danger-subtle text-danger">Protection</span>
+                                    </div>
+                                    <h5 class="product-title fw-bold mb-2">Tempered Glass Protector</h5>
+                                    <p class="product-description text-muted mb-3">
+                                        9H hardness tempered glass with oleophobic coating and bubble-free installation.
+                                    </p>
+                                    <div class="product-rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <span class="ms-2 text-muted">(4.7)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="product-price">
+                                            <span class="h4 fw-bold text-primary">$15</span>
+                                        </div>
+                                        <button class="btn btn-primary rounded-pill">
+                                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-mobile-alt me-2"></i>MobileHub
+                    </h5>
+                    <p class="text-muted">
+                        Your trusted partner for premium mobile technology, accessories, and connectivity solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Products</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Smartphones</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Accessories</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Cases</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Chargers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="sim-activation.html" class="text-muted text-decoration-none">SIM Activation</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tech Support</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Warranty</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#contact" class="text-muted text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-muted"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-envelope me-2"></i>info@mobilehub.com</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-map-marker-alt me-2"></i>123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2025 MobileHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
