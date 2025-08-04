@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - MobileHub</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="MobileHub Logo" class="navbar-logo me-2">
+                <span class="brand-text">MobileHub</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sim-activation.html">SIM Activation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-link p-2 me-2" id="themeToggle">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <button class="btn btn-outline-primary me-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <div class="mb-4">
+                        <i class="fas fa-images display-1 text-primary mb-3"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3">Photo Gallery</h1>
+                    <p class="lead text-muted">
+                        Explore our collection of premium devices and store experiences
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters py-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ul class="nav nav-pills nav-fill glass-tabs justify-content-center" id="galleryTabs" role="tablist" data-aos="fade-up">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="all-tab" data-filter="all">
+                                <i class="fas fa-th me-2"></i>All Photos
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="phones-tab" data-filter="phones">
+                                <i class="fas fa-mobile-alt me-2"></i>Phones
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="accessories-tab" data-filter="accessories">
+                                <i class="fas fa-headphones me-2"></i>Accessories
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="store-tab" data-filter="store">
+                                <i class="fas fa-store me-2"></i>Store
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery py-5">
+        <div class="container">
+            <div class="row g-4" id="galleryGrid">
+                <!-- Phone Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="phones" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-phone-1.jpg" alt="iPhone 15 Pro" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-phone-1.jpg', 'iPhone 15 Pro')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">iPhone 15 Pro</h6>
+                            <small class="text-muted">Latest flagship device</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="phones" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-phone-2.jpg" alt="Samsung Galaxy S24" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-phone-2.jpg', 'Samsung Galaxy S24')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Samsung Galaxy S24</h6>
+                            <small class="text-muted">Premium Android flagship</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="phones" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-phone-3.jpg" alt="Google Pixel 8" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-phone-3.jpg', 'Google Pixel 8')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Google Pixel 8</h6>
+                            <small class="text-muted">Pure Android experience</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessory Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="accessories" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-accessory-1.jpg" alt="AirPods Pro" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-accessory-1.jpg', 'AirPods Pro')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">AirPods Pro</h6>
+                            <small class="text-muted">Wireless earbuds</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="accessories" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-accessory-2.jpg" alt="Wireless Charger" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-accessory-2.jpg', 'Wireless Charger')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Wireless Charger</h6>
+                            <small class="text-muted">Fast charging pad</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="accessories" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-accessory-3.jpg" alt="Phone Cases" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-accessory-3.jpg', 'Phone Cases')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Phone Cases</h6>
+                            <small class="text-muted">Premium protection</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Store Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="store" data-aos="fade-up" data-aos-delay="700">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-store-1.jpg" alt="Store Interior" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-store-1.jpg', 'Store Interior')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Store Interior</h6>
+                            <small class="text-muted">Modern retail space</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="store" data-aos="fade-up" data-aos-delay="800">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-store-2.jpg" alt="Product Display" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-store-2.jpg', 'Product Display')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Product Display</h6>
+                            <small class="text-muted">Interactive showcase</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="store" data-aos="fade-up" data-aos-delay="900">
+                    <div class="gallery-card glass-card overflow-hidden">
+                        <div class="gallery-image">
+                            <img src="gallery-store-3.jpg" alt="Customer Service" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <button class="btn btn-light btn-sm rounded-pill" onclick="openLightbox('gallery-store-3.jpg', 'Customer Service')">
+                                    <i class="fas fa-expand me-2"></i>View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info p-3">
+                            <h6 class="fw-bold mb-1">Customer Service</h6>
+                            <small class="text-muted">Expert assistance</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content glass-card border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="lightboxTitle">Photo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="" alt="" id="lightboxImage" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <img src="logo.png" alt="MobileHub Logo" class="footer-logo me-2">
+                        <span>MobileHub</span>
+                    </h5>
+                    <p class="text-muted">
+                        Your trusted partner for premium mobile technology, accessories, and connectivity solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Products</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Smartphones</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Accessories</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Cases</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Chargers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="sim-activation.html" class="text-muted text-decoration-none">SIM Activation</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tech Support</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Warranty</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-muted text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="index.html#contact" class="text-muted text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-muted"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-envelope me-2"></i>info@mobilehub.com</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-map-marker-alt me-2"></i>123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2025 MobileHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- Gallery JS -->
+    <script>
+        // Gallery filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter items
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.classList.add('fade-in');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+        
+        // Lightbox functionality
+        function openLightbox(imageSrc, title) {
+            const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+            document.getElementById('lightboxImage').src = imageSrc;
+            document.getElementById('lightboxTitle').textContent = title;
+            modal.show();
+        }
+    </script>
+</body>
+</html>
