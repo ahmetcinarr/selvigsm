@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Activation - MobileHub</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="MobileHub Logo" class="navbar-logo me-2">
+                <span class="brand-text">MobileHub</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sim-activation.html">SIM Activation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-link p-2 me-2" id="themeToggle">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <button class="btn btn-outline-primary me-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <div class="mb-4">
+                        <i class="fas fa-sim-card display-1 text-primary mb-3"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3">SIM Card Activation</h1>
+                    <p class="lead text-muted">
+                        Get connected instantly with our fast and reliable SIM activation service
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Info Section -->
+    <section class="service-info py-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card glass-card h-100 p-4 text-center">
+                        <div class="info-icon mb-3">
+                            <i class="fas fa-clock text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Instant Activation</h5>
+                        <p class="text-muted">
+                            Your SIM card will be activated within minutes of submitting your information.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-card glass-card h-100 p-4 text-center">
+                        <div class="info-icon mb-3">
+                            <i class="fas fa-shield-alt text-success"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Secure Process</h5>
+                        <p class="text-muted">
+                            Your personal information is protected with bank-level security encryption.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-card glass-card h-100 p-4 text-center">
+                        <div class="info-icon mb-3">
+                            <i class="fas fa-headset text-info"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">24/7 Support</h5>
+                        <p class="text-muted">
+                            Our customer support team is available around the clock to assist you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supported Carriers -->
+            <div class="row text-center mb-5">
+                <div class="col-12" data-aos="fade-up">
+                    <h3 class="fw-bold mb-4">Supported Carriers</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="carriers-grid d-flex flex-wrap justify-content-center gap-4">
+                                <div class="carrier-item glass-card p-3">
+                                    <i class="fas fa-signal text-primary mb-2"></i>
+                                    <div class="fw-bold">Verizon</div>
+                                </div>
+                                <div class="carrier-item glass-card p-3">
+                                    <i class="fas fa-signal text-danger mb-2"></i>
+                                    <div class="fw-bold">AT&T</div>
+                                </div>
+                                <div class="carrier-item glass-card p-3">
+                                    <i class="fas fa-signal text-warning mb-2"></i>
+                                    <div class="fw-bold">T-Mobile</div>
+                                </div>
+                                <div class="carrier-item glass-card p-3">
+                                    <i class="fas fa-signal text-success mb-2"></i>
+                                    <div class="fw-bold">Sprint</div>
+                                </div>
+                                <div class="carrier-item glass-card p-3">
+                                    <i class="fas fa-signal text-info mb-2"></i>
+                                    <div class="fw-bold">Mint Mobile</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activation Form Section -->
+    <section class="activation-form py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-container glass-card p-5" data-aos="fade-up">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold mb-3">Activate Your SIM Card</h3>
+                            <p class="text-muted">
+                                Fill out the form below to get your SIM card activated instantly
+                            </p>
+                        </div>
+
+                        <form id="activationForm" novalidate>
+                            <div class="row g-3">
+                                <!-- Full Name -->
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label fw-bold">
+                                        <i class="fas fa-user me-2"></i>Full Name
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="fullName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your full name.
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold">
+                                        <i class="fas fa-envelope me-2"></i>Email Address
+                                    </label>
+                                    <input type="email" class="form-control form-control-lg" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+
+                                <!-- National ID -->
+                                <div class="col-md-6">
+                                    <label for="nationalId" class="form-label fw-bold">
+                                        <i class="fas fa-id-card me-2"></i>National ID / SSN
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="nationalId" required pattern="[0-9]{9,11}">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid National ID or SSN (9-11 digits).
+                                    </div>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="col-md-6">
+                                    <label for="phoneNumber" class="form-label fw-bold">
+                                        <i class="fas fa-phone me-2"></i>Phone Number
+                                    </label>
+                                    <input type="tel" class="form-control form-control-lg" id="phoneNumber" required pattern="[0-9]{10}">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid 10-digit phone number.
+                                    </div>
+                                </div>
+
+                                <!-- SIM Card Number -->
+                                <div class="col-md-6">
+                                    <label for="simNumber" class="form-label fw-bold">
+                                        <i class="fas fa-sim-card me-2"></i>SIM Card Number (ICCID)
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="simNumber" required pattern="[0-9]{19,20}">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid SIM card number (19-20 digits).
+                                    </div>
+                                </div>
+
+                                <!-- Carrier Selection -->
+                                <div class="col-md-6">
+                                    <label for="carrier" class="form-label fw-bold">
+                                        <i class="fas fa-signal me-2"></i>Select Carrier
+                                    </label>
+                                    <select class="form-select form-select-lg" id="carrier" required>
+                                        <option value="">Choose your carrier...</option>
+                                        <option value="verizon">Verizon</option>
+                                        <option value="att">AT&T</option>
+                                        <option value="tmobile">T-Mobile</option>
+                                        <option value="sprint">Sprint</option>
+                                        <option value="mint">Mint Mobile</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select your carrier.
+                                    </div>
+                                </div>
+
+                                <!-- Plan Type -->
+                                <div class="col-12">
+                                    <label for="planType" class="form-label fw-bold">
+                                        <i class="fas fa-list me-2"></i>Plan Type
+                                    </label>
+                                    <select class="form-select form-select-lg" id="planType" required>
+                                        <option value="">Select your plan...</option>
+                                        <option value="prepaid">Prepaid</option>
+                                        <option value="postpaid">Postpaid</option>
+                                        <option value="unlimited">Unlimited</option>
+                                        <option value="family">Family Plan</option>
+                                        <option value="business">Business Plan</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select your plan type.
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div class="col-12">
+                                    <label for="address" class="form-label fw-bold">
+                                        <i class="fas fa-map-marker-alt me-2"></i>Address
+                                    </label>
+                                    <textarea class="form-control form-control-lg" id="address" rows="3" required placeholder="Enter your full address..."></textarea>
+                                    <div class="invalid-feedback">
+                                        Please provide your address.
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree to the terms and conditions.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+                                        <i class="fas fa-rocket me-2"></i>Activate SIM Card
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="alert alert-success mt-4 d-none" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <strong>Success!</strong> Your SIM card activation request has been submitted. You will receive a confirmation email shortly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h3 class="fw-bold mb-3">Frequently Asked Questions</h3>
+                    <p class="text-muted">Common questions about our SIM activation service</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion" data-aos="fade-up">
+                        <div class="accordion-item glass-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long does activation take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Most SIM cards are activated within 5-10 minutes. In rare cases, it may take up to 24 hours for full network connectivity.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item glass-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What information do I need?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You'll need your full name, National ID/SSN, phone number, SIM card number (ICCID), and your chosen carrier information.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item glass-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is my information secure?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we use bank-level encryption to protect your personal information. Your data is never shared with third parties without your consent.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item glass-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What if I need help?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our customer support team is available 24/7 via phone, email, or live chat to assist you with any questions or issues.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <img src="logo.png" alt="MobileHub Logo" class="footer-logo me-2">
+                        <span>MobileHub</span>
+                    </h5>
+                    <p class="text-muted">
+                        Your trusted partner for premium mobile technology, accessories, and connectivity solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Products</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Smartphones</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Accessories</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Cases</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Chargers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="sim-activation.html" class="text-muted text-decoration-none">SIM Activation</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tech Support</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Warranty</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#contact" class="text-muted text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-muted"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-envelope me-2"></i>info@mobilehub.com</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-map-marker-alt me-2"></i>123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2025 MobileHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
